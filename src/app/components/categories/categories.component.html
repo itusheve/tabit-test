@@ -1,0 +1,5 @@
+<ul class="list">
+  <li *ngFor="let c of categories" (click)="selectCategory(c)">
+    {{c.name}} <i class="fa fa-pencil pull-right" aria-hidden="true" (click)="edit(c)"></i>
+  </li>
+</ul>

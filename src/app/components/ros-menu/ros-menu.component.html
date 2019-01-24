@@ -1,0 +1,25 @@
+<div class="container">
+  <h1 class="page-header">ROS Menu</h1>
+  <div class="row">
+    <div class="col-sm-4">
+      <h4>Categories</h4>
+      <app-categories [categories]="categories" (onSelectCategory)="onSelectCategory($event)" (onEditCategory)="onEditCategory($event)"></app-categories>
+    </div>
+    <div class="col-sm-8">
+      <div class="row">
+        <div class="col-sm-6">
+          <h4>Items</h4>
+          <app-category-items [items]="selectedCtegory?.items"
+                              (onEditItem)="onEditItem($event)"></app-category-items>
+        </div>
+        <div class="col-sm-6">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<app-item-details-modal #itemDetailsModal (onSave)="saveItem($event)"></app-item-details-modal>
+<app-edit-category #editCategoryModal (onSave)="saveCategory($event)"></app-edit-category>
+

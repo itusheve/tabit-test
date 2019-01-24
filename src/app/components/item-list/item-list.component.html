@@ -1,0 +1,21 @@
+<div class="container">
+  <h1 class="page-header">Printing priority</h1>
+  <div class="row">
+    <div class="col-sm-6">
+      <h2>Items List</h2>
+      <ul class="list" dragula="VAMPIRES" [(dragulaModel)]="items" style="min-height: 200px">
+        <li *ngFor="let i of items">
+          {{ i.name }}
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-6">
+      <h2>Priority List</h2>
+      <ul class="list" dragula="VAMPIRES" [(dragulaModel)]="itemsB" style="min-height: 200px">
+        <li *ngFor="let i of itemsB">
+          {{ i.name }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
